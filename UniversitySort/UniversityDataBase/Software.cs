@@ -13,14 +13,16 @@ namespace University_DB
 
         public Software()
         {
-            this.softwarePackeges = new HashSet<SoftwarePackage>();
+            
         }
         [Key]
         public int Software_ID { get; set; }
         [Required]
         public string Name { get; set; }
+        public int SoftwarePackage_ID { get; set; }
 
+        public SoftwarePackage SoftwarePackage { get; set; }
 
-       public virtual ICollection<SoftwarePackage> softwarePackeges { get; set; }
+       
     }
 }

@@ -14,16 +14,11 @@ namespace UniversitySort
     
     public partial class Softwares
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Softwares()
-        {
-            this.SoftwarePackages = new HashSet<SoftwarePackages>();
-        }
-    
         public int Software_ID { get; set; }
         public string Name { get; set; }
+        public int SoftwarePackage_ID { get; set; }
+        public Nullable<int> SoftwarePackage_Package_ID { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SoftwarePackages> SoftwarePackages { get; set; }
+        public virtual SoftwarePackages SoftwarePackages { get; set; }
     }
 }

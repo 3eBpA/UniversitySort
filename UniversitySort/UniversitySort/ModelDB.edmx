@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="UniversityDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="University_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="__MigrationHistory">
           <Key>
             <PropertyRef Name="MigrationId" />
@@ -46,6 +46,7 @@
           </Key>
           <Property Name="Package_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Software_ID" Type="int" Nullable="false" />
+          <Property Name="SoftwarePackageName" Type="nvarchar(max)" />
           <Property Name="Audience_ID" Type="int" Nullable="false" />
           <Property Name="Semester_ID" Type="int" Nullable="false" />
         </EntityType>
@@ -55,14 +56,8 @@
           </Key>
           <Property Name="Software_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-        </EntityType>
-        <EntityType Name="SoftwareSoftwarePackages">
-          <Key>
-            <PropertyRef Name="Software_Software_ID" />
-            <PropertyRef Name="SoftwarePackage_Package_ID" />
-          </Key>
-          <Property Name="Software_Software_ID" Type="int" Nullable="false" />
-          <Property Name="SoftwarePackage_Package_ID" Type="int" Nullable="false" />
+          <Property Name="SoftwarePackage_ID" Type="int" Nullable="false" />
+          <Property Name="SoftwarePackage_Package_ID" Type="int" />
         </EntityType>
         <Association Name="FK_dbo_Groups_dbo_Semesters_Semester_ID">
           <End Role="Semesters" Type="Self.Semesters" Multiplicity="1">
@@ -106,42 +101,25 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_dbo_SoftwareSoftwarePackages_dbo_SoftwarePackages_SoftwarePackage_Package_ID">
-          <End Role="SoftwarePackages" Type="Self.SoftwarePackages" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="SoftwareSoftwarePackages" Type="Self.SoftwareSoftwarePackages" Multiplicity="*" />
+        <Association Name="FK_dbo_Softwares_dbo_SoftwarePackages_SoftwarePackage_Package_ID">
+          <End Role="SoftwarePackages" Type="Self.SoftwarePackages" Multiplicity="0..1" />
+          <End Role="Softwares" Type="Self.Softwares" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="SoftwarePackages">
               <PropertyRef Name="Package_ID" />
             </Principal>
-            <Dependent Role="SoftwareSoftwarePackages">
+            <Dependent Role="Softwares">
               <PropertyRef Name="SoftwarePackage_Package_ID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_dbo_SoftwareSoftwarePackages_dbo_Softwares_Software_Software_ID">
-          <End Role="Softwares" Type="Self.Softwares" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="SoftwareSoftwarePackages" Type="Self.SoftwareSoftwarePackages" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Softwares">
-              <PropertyRef Name="Software_ID" />
-            </Principal>
-            <Dependent Role="SoftwareSoftwarePackages">
-              <PropertyRef Name="Software_Software_ID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="UniversityDBModelStoreContainer">
+        <EntityContainer Name="University_DBModelStoreContainer">
           <EntitySet Name="__MigrationHistory" EntityType="Self.__MigrationHistory" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Audiences" EntityType="Self.Audiences" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Groups" EntityType="Self.Groups" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Semesters" EntityType="Self.Semesters" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="SoftwarePackages" EntityType="Self.SoftwarePackages" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Softwares" EntityType="Self.Softwares" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="SoftwareSoftwarePackages" EntityType="Self.SoftwareSoftwarePackages" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_dbo_Groups_dbo_Semesters_Semester_ID" Association="Self.FK_dbo_Groups_dbo_Semesters_Semester_ID">
             <End Role="Semesters" EntitySet="Semesters" />
             <End Role="Groups" EntitySet="Groups" />
@@ -154,20 +132,16 @@
             <End Role="Semesters" EntitySet="Semesters" />
             <End Role="SoftwarePackages" EntitySet="SoftwarePackages" />
           </AssociationSet>
-          <AssociationSet Name="FK_dbo_SoftwareSoftwarePackages_dbo_SoftwarePackages_SoftwarePackage_Package_ID" Association="Self.FK_dbo_SoftwareSoftwarePackages_dbo_SoftwarePackages_SoftwarePackage_Package_ID">
+          <AssociationSet Name="FK_dbo_Softwares_dbo_SoftwarePackages_SoftwarePackage_Package_ID" Association="Self.FK_dbo_Softwares_dbo_SoftwarePackages_SoftwarePackage_Package_ID">
             <End Role="SoftwarePackages" EntitySet="SoftwarePackages" />
-            <End Role="SoftwareSoftwarePackages" EntitySet="SoftwareSoftwarePackages" />
-          </AssociationSet>
-          <AssociationSet Name="FK_dbo_SoftwareSoftwarePackages_dbo_Softwares_Software_Software_ID" Association="Self.FK_dbo_SoftwareSoftwarePackages_dbo_Softwares_Software_Software_ID">
             <End Role="Softwares" EntitySet="Softwares" />
-            <End Role="SoftwareSoftwarePackages" EntitySet="SoftwareSoftwarePackages" />
           </AssociationSet>
         </EntityContainer>
       </Schema>
     </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
-      <Schema Namespace="UniversityDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+      <Schema Namespace="University_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
         <EntityType Name="C__MigrationHistory">
           <Key>
             <PropertyRef Name="MigrationId" />
@@ -213,11 +187,12 @@
           </Key>
           <Property Name="Package_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Software_ID" Type="Int32" Nullable="false" />
+          <Property Name="SoftwarePackageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Audience_ID" Type="Int32" Nullable="false" />
           <Property Name="Semester_ID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Audiences" Relationship="Self.FK_dbo_SoftwarePackages_dbo_Audiences_Audience_ID" FromRole="SoftwarePackages" ToRole="Audiences" />
           <NavigationProperty Name="Semesters" Relationship="Self.FK_dbo_SoftwarePackages_dbo_Semesters_Semester_ID" FromRole="SoftwarePackages" ToRole="Semesters" />
-          <NavigationProperty Name="Softwares" Relationship="Self.SoftwareSoftwarePackages" FromRole="SoftwarePackages" ToRole="Softwares" />
+          <NavigationProperty Name="Softwares" Relationship="Self.FK_dbo_Softwares_dbo_SoftwarePackages_SoftwarePackage_Package_ID" FromRole="SoftwarePackages" ToRole="Softwares" />
         </EntityType>
         <EntityType Name="Softwares">
           <Key>
@@ -225,7 +200,9 @@
           </Key>
           <Property Name="Software_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
-          <NavigationProperty Name="SoftwarePackages" Relationship="Self.SoftwareSoftwarePackages" FromRole="Softwares" ToRole="SoftwarePackages" />
+          <Property Name="SoftwarePackage_ID" Type="Int32" Nullable="false" />
+          <Property Name="SoftwarePackage_Package_ID" Type="Int32" />
+          <NavigationProperty Name="SoftwarePackages" Relationship="Self.FK_dbo_Softwares_dbo_SoftwarePackages_SoftwarePackage_Package_ID" FromRole="Softwares" ToRole="SoftwarePackages" />
         </EntityType>
         <Association Name="FK_dbo_SoftwarePackages_dbo_Audiences_Audience_ID">
           <End Role="Audiences" Type="Self.Audiences" Multiplicity="1">
@@ -269,11 +246,19 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="SoftwareSoftwarePackages">
-          <End Role="SoftwarePackages" Type="Self.SoftwarePackages" Multiplicity="*" />
+        <Association Name="FK_dbo_Softwares_dbo_SoftwarePackages_SoftwarePackage_Package_ID">
+          <End Role="SoftwarePackages" Type="Self.SoftwarePackages" Multiplicity="0..1" />
           <End Role="Softwares" Type="Self.Softwares" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SoftwarePackages">
+              <PropertyRef Name="Package_ID" />
+            </Principal>
+            <Dependent Role="Softwares">
+              <PropertyRef Name="SoftwarePackage_Package_ID" />
+            </Dependent>
+          </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="UniversityDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="University_DBEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="C__MigrationHistory" EntityType="Self.C__MigrationHistory" />
           <EntitySet Name="Audiences" EntityType="Self.Audiences" />
           <EntitySet Name="Groups" EntityType="Self.Groups" />
@@ -292,7 +277,7 @@
             <End Role="Semesters" EntitySet="Semesters" />
             <End Role="SoftwarePackages" EntitySet="SoftwarePackages" />
           </AssociationSet>
-          <AssociationSet Name="SoftwareSoftwarePackages" Association="Self.SoftwareSoftwarePackages">
+          <AssociationSet Name="FK_dbo_Softwares_dbo_SoftwarePackages_SoftwarePackage_Package_ID" Association="Self.FK_dbo_Softwares_dbo_SoftwarePackages_SoftwarePackage_Package_ID">
             <End Role="SoftwarePackages" EntitySet="SoftwarePackages" />
             <End Role="Softwares" EntitySet="Softwares" />
           </AssociationSet>
@@ -302,9 +287,9 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="UniversityDBModelStoreContainer" CdmEntityContainer="UniversityDBEntities">
+        <EntityContainerMapping StorageEntityContainer="University_DBModelStoreContainer" CdmEntityContainer="University_DBEntities">
           <EntitySetMapping Name="C__MigrationHistory">
-            <EntityTypeMapping TypeName="UniversityDBModel.C__MigrationHistory">
+            <EntityTypeMapping TypeName="University_DBModel.C__MigrationHistory">
               <MappingFragment StoreEntitySet="__MigrationHistory">
                 <ScalarProperty Name="MigrationId" ColumnName="MigrationId" />
                 <ScalarProperty Name="ContextKey" ColumnName="ContextKey" />
@@ -314,7 +299,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Audiences">
-            <EntityTypeMapping TypeName="UniversityDBModel.Audiences">
+            <EntityTypeMapping TypeName="University_DBModel.Audiences">
               <MappingFragment StoreEntitySet="Audiences">
                 <ScalarProperty Name="Audience_ID" ColumnName="Audience_ID" />
                 <ScalarProperty Name="Audience_Number" ColumnName="Audience_Number" />
@@ -324,7 +309,7 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Groups">
-            <EntityTypeMapping TypeName="UniversityDBModel.Groups">
+            <EntityTypeMapping TypeName="University_DBModel.Groups">
               <MappingFragment StoreEntitySet="Groups">
                 <ScalarProperty Name="Group_ID" ColumnName="Group_ID" />
                 <ScalarProperty Name="Group_Name" ColumnName="Group_Name" />
@@ -335,38 +320,33 @@
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Semesters">
-            <EntityTypeMapping TypeName="UniversityDBModel.Semesters">
+            <EntityTypeMapping TypeName="University_DBModel.Semesters">
               <MappingFragment StoreEntitySet="Semesters">
                 <ScalarProperty Name="Semester_ID" ColumnName="Semester_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="SoftwarePackages">
-            <EntityTypeMapping TypeName="UniversityDBModel.SoftwarePackages">
+            <EntityTypeMapping TypeName="University_DBModel.SoftwarePackages">
               <MappingFragment StoreEntitySet="SoftwarePackages">
                 <ScalarProperty Name="Package_ID" ColumnName="Package_ID" />
                 <ScalarProperty Name="Software_ID" ColumnName="Software_ID" />
+                <ScalarProperty Name="SoftwarePackageName" ColumnName="SoftwarePackageName" />
                 <ScalarProperty Name="Audience_ID" ColumnName="Audience_ID" />
                 <ScalarProperty Name="Semester_ID" ColumnName="Semester_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Softwares">
-            <EntityTypeMapping TypeName="UniversityDBModel.Softwares">
+            <EntityTypeMapping TypeName="University_DBModel.Softwares">
               <MappingFragment StoreEntitySet="Softwares">
                 <ScalarProperty Name="Software_ID" ColumnName="Software_ID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="SoftwarePackage_ID" ColumnName="SoftwarePackage_ID" />
+                <ScalarProperty Name="SoftwarePackage_Package_ID" ColumnName="SoftwarePackage_Package_ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <AssociationSetMapping Name="SoftwareSoftwarePackages" TypeName="UniversityDBModel.SoftwareSoftwarePackages" StoreEntitySet="SoftwareSoftwarePackages">
-            <EndProperty Name="SoftwarePackages">
-              <ScalarProperty Name="Package_ID" ColumnName="SoftwarePackage_Package_ID" />
-            </EndProperty>
-            <EndProperty Name="Softwares">
-              <ScalarProperty Name="Software_ID" ColumnName="Software_Software_ID" />
-            </EndProperty>
-          </AssociationSetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

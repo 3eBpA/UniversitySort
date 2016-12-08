@@ -20,16 +20,7 @@ namespace UniversitySort
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
-            UniversityDB db = new UniversityDB();
-
-            Software s = new Software() { Name = "Visual 2013" };
-
-            db.Software.Add(s);
-            db.SaveChanges();
-
-
-           
+            
 
 
 

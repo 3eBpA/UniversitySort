@@ -5,7 +5,7 @@ namespace University_DB
     public class UniversityDB : DbContext
     {
         public UniversityDB()
-            : base("UniversityDB")
+            : base("University_DB")
         { }
 
         public DbSet<Software> Software { get; set; }
