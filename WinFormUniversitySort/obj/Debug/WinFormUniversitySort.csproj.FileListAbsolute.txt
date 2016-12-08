@@ -1,0 +1,9 @@
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\bin\Debug\WinFormUniversitySort.exe.config
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\bin\Debug\WinFormUniversitySort.exe
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\bin\Debug\WinFormUniversitySort.pdb
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\obj\Debug\WinFormUniversitySort.csprojResolveAssemblyReference.cache
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\obj\Debug\WinFormUniversitySort.Form1.resources
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\obj\Debug\WinFormUniversitySort.Properties.Resources.resources
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\obj\Debug\WinFormUniversitySort.csproj.GenerateResource.Cache
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\obj\Debug\WinFormUniversitySort.exe
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\obj\Debug\WinFormUniversitySort.pdb
