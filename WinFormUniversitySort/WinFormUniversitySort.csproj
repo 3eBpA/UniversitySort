@@ -33,7 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.2\lib\net45\EntityFramework.dll</HintPath>
       <Private>True</Private>
@@ -47,10 +46,6 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
-=======
-    <Reference Include="System" />
-    <Reference Include="System.Core" />
->>>>>>> 9ef937cd69108198ba9684200a615ef313205455
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,10 +63,7 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <Compile Include="ModelDb.cs" />
-=======
->>>>>>> 9ef937cd69108198ba9684200a615ef313205455
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -86,7 +78,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-<<<<<<< HEAD
     <None Include="packages.config" />
     <None Include="Properties\DataSources\System.ComponentModel.DataAnnotations.Schema.IndexAttribute.datasource" />
     <None Include="Properties\DataSources\System.Data.Entity.Core.Common.CommandTrees.BasicCommandTreeVisitor.datasource" />
@@ -580,8 +571,6 @@
     <None Include="Properties\DataSources\University_DB.Software.datasource" />
     <None Include="Properties\DataSources\University_DB.SoftwarePackage.datasource" />
     <None Include="Properties\DataSources\University_DB.UniversityDB.datasource" />
-=======
->>>>>>> 9ef937cd69108198ba9684200a615ef313205455
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -595,7 +584,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-<<<<<<< HEAD
   <ItemGroup>
     <ProjectReference Include="..\..\UniversitySort\UniversityDataBase\UniversityDataBase.csproj">
       <Project>{7301774e-cdfa-4937-ad45-574d15884f40}</Project>
@@ -605,8 +593,6 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-=======
->>>>>>> 9ef937cd69108198ba9684200a615ef313205455
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

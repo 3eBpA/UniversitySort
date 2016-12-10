@@ -7,7 +7,6 @@ C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinForm
 C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\obj\Debug\WinFormUniversitySort.csproj.GenerateResource.Cache
 C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\obj\Debug\WinFormUniversitySort.exe
 C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\obj\Debug\WinFormUniversitySort.pdb
-<<<<<<< HEAD
 C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\bin\Debug\UniversityDataBase.dll
 C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\bin\Debug\EntityFramework.dll
 C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\WinFormUniversitySort\WinFormUniversitySort\bin\Debug\UniversityDataBase.pdb
@@ -46,5 +45,3 @@ E:\Новая папка\UniversitySort\WinFormUniversitySort\obj\Debug\WinFormU
 E:\Новая папка\UniversitySort\WinFormUniversitySort\obj\Debug\WinFormUniversitySort.Form1.resources
 E:\Новая папка\UniversitySort\WinFormUniversitySort\obj\Debug\WinFormUniversitySort.Properties.Resources.resources
 E:\Новая папка\UniversitySort\WinFormUniversitySort\obj\Debug\WinFormUniversitySort.csproj.GenerateResource.Cache
-=======
->>>>>>> 9ef937cd69108198ba9684200a615ef313205455
