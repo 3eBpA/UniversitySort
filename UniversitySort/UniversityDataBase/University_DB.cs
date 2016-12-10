@@ -5,7 +5,7 @@ namespace University_DB
     public class UniversityDB : DbContext
     {
         public UniversityDB()
-            : base("University_DB")
+            : base("UniversityDB")
         { }
 
         public DbSet<Software> Software { get; set; }
@@ -14,9 +14,6 @@ namespace University_DB
         public DbSet<Semester> Semester { get; set; }
         public DbSet<Group> Group { get; set; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        {
-            base.OnModelCreating(modelBuilder);
-        }
+       
     }
 }

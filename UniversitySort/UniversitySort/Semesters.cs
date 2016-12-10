@@ -17,14 +17,11 @@ namespace UniversitySort
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Semesters()
         {
-            this.Groups = new HashSet<Groups>();
             this.SoftwarePackages = new HashSet<SoftwarePackages>();
         }
     
         public int Semester_ID { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Groups> Groups { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SoftwarePackages> SoftwarePackages { get; set; }
     }

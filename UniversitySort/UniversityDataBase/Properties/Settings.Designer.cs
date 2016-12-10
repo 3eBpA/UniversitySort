@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace UniversitySort.Properties {
+namespace UniversityDataBase.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -26,7 +26,7 @@ namespace UniversitySort.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MARYAN\\SQLEXPRESS;Initial Catalog=Univarsity;Integrated Security=True" +
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MARYAN\\SQLEXPRESS;Initial Catalog=University;Integrated Security=True" +
             "")]
         public string Setting {
             get {

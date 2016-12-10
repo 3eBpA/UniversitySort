@@ -25,6 +25,8 @@ namespace University_DB
         public bool isBusy { get; set; }
         
         public virtual ICollection<SoftwarePackage> SoftwarePackages { get; set; }
+
+        public Group Group { get; set; }
       
     }
 }

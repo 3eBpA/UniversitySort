@@ -18,8 +18,7 @@ namespace UniversitySort
         public string Group_Name { get; set; }
         public int Students_Count { get; set; }
         public string Specialization { get; set; }
-        public int Semester_ID { get; set; }
     
-        public virtual Semesters Semesters { get; set; }
+        public virtual Audiences Audiences { get; set; }
     }
 }

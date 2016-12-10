@@ -23,8 +23,8 @@ namespace UniversitySort
         public int Package_ID { get; set; }
         public int Software_ID { get; set; }
         public string SoftwarePackageName { get; set; }
-        public int Audience_ID { get; set; }
         public int Semester_ID { get; set; }
+        public int Audience_ID { get; set; }
     
         public virtual Audiences Audiences { get; set; }
         public virtual Semesters Semesters { get; set; }

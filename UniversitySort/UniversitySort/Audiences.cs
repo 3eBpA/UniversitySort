@@ -25,6 +25,7 @@ namespace UniversitySort
         public int Places { get; set; }
         public bool isBusy { get; set; }
     
+        public virtual Groups Groups { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SoftwarePackages> SoftwarePackages { get; set; }
     }

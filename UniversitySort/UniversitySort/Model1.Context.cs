@@ -13,10 +13,10 @@ namespace UniversitySort
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class University_DBEntities : DbContext
+    public partial class UniversityDBEntities2 : DbContext
     {
-        public University_DBEntities()
-            : base("name=University_DBEntities")
+        public UniversityDBEntities2()
+            : base("name=UniversityDBEntities2")
         {
         }
     

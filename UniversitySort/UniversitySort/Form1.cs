@@ -20,8 +20,9 @@ namespace UniversitySort
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-
+            UniversityDB db = new UniversityDB();
+            db.Software.Add(new Software() { Name = "Sql" });
+            db.SaveChanges();
 
 
         }

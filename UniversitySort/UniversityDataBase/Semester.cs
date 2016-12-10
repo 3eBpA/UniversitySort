@@ -13,12 +13,10 @@ namespace University_DB
         public Semester()
         {
             SoftwarePackages = new HashSet<SoftwarePackage>();
-            Groups = new HashSet<Group>();
         }
         [Key]
         public int Semester_ID { get; set; }
 
         public virtual ICollection<SoftwarePackage> SoftwarePackages { get; set; }
-        public virtual ICollection<Group> Groups { get; set; }
     }
 }

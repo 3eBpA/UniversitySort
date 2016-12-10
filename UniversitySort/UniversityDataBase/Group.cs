@@ -17,6 +17,7 @@ namespace University_DB
 
         }
         [Key]
+        [ForeignKey("Audience")]
         public int Group_ID { get; set; }
         [Required]
         public string Group_Name { get; set; }
@@ -25,8 +26,6 @@ namespace University_DB
         [Required]
         public string Specialization { get; set; }
         
-        public int Semester_ID { get; set; }
-
-        public virtual Semester Semester { get; set; }
+        public Audience Audience { get; set; }
     }
 }
