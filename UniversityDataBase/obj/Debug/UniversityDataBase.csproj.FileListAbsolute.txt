@@ -1,9 +1,0 @@
-C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\UniversitySort\UniversityDataBase\bin\Debug\UniversityDataBase.dll.config
-C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\UniversitySort\UniversityDataBase\bin\Debug\UniversityDataBase.dll
-C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\UniversitySort\UniversityDataBase\bin\Debug\UniversityDataBase.pdb
-C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\UniversitySort\UniversityDataBase\bin\Debug\EntityFramework.dll
-C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\UniversitySort\UniversityDataBase\bin\Debug\EntityFramework.SqlServer.dll
-C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\UniversitySort\UniversityDataBase\bin\Debug\EntityFramework.xml
-C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\UniversitySort\UniversityDataBase\bin\Debug\EntityFramework.SqlServer.xml
-C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\UniversitySort\UniversityDataBase\obj\Debug\UniversityDataBase.dll
-C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\UniversitySort\UniversityDataBase\obj\Debug\UniversityDataBase.pdb

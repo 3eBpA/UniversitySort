@@ -1,0 +1,13 @@
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\bin\Debug\UniversityClasses.dll
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\bin\Debug\UniversityClasses.pdb
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\obj\Debug\UniversityClasses.dll
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\obj\Debug\UniversityClasses.pdb
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\bin\Debug\UniversityClasses.dll.config
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\bin\Debug\EntityFramework.dll
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\bin\Debug\EntityFramework.xml
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\obj\Debug\UniversityClasses.Properties.Resources.resources
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\obj\Debug\UniversityClasses.csproj.GenerateResource.Cache
+C:\Users\Ігор\Documents\Visual Studio 2015\Projects\ProjectManagment\ShuffleGroups\UniversityClasses\obj\Debug\UniversityClasses.csprojResolveAssemblyReference.cache
